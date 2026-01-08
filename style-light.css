@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #eee8dc;
+  color: #53483a;
+  font-family: 'Noto Sans TC', sans-serif;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  margin: 10px 0;
+  vertical-align: middle;
+  color: #53483a;
+}
+
+input, select {
+  padding: 10px;
+  margin: 10px 0;
+  width: 160px;
+  border: 1.5px solid #c2b7a8;
+  border-radius: 6px;
+  background-color: #f4eee4;
+  color: #53483a;
+  font-size: 1rem;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #9f7c58;
+  background-color: #f1e7d6;
+  outline: none;
+}
+
+button {
+  padding: 12px 24px;
+  margin: 20px 0 0;
+  font-size: 1rem;
+  background-color: #9f7c58;
+  color: #f3f0ea;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #ad8a64;
+  transform: scale(1.03);
+}
+
+.column, .column-left, .column-middle, .column-right {
+  background-color: #f4eee4;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 280px;
+  box-shadow: 0 4px 10px rgba(159,124,88,0.2);
+  border: 1px solid #dcd0c0;
+}
+
+.column h3 {
+  color: #9f7c58;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+#statistics, #output {
+  font-family: 'Noto Sans Mono CJK', monospace;
+  font-weight: 600;
+  background-color: #f4eee4;
+  color: #53483a;
+  padding: 10px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #dcd0c0;
+}
+
+/* 沒有內容時移除邊框 */
+#statistics:empty,
+#output:empty {
+  border: none;
+  background-color: #f4eee4;
+}
+
