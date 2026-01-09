@@ -83,15 +83,16 @@ function simulate() {
           if(DEX) line.push(`DEX +${DEX}`);
           if(INT) line.push(`INT +${INT}`);
           if(LUK) line.push(`LUK +${LUK}`);
-          if(MA) line.push(`魔攻 +${MA}`);
-          if(ALL) line.push(`全屬 +${ALL}%`);
+          if(MA) line.push(`攻擊力 +${MA}`);
+          if(MA) line.push(`魔法攻擊力 +${MA}`);
+          if(ALL) line.push(`全屬性 +${ALL}%`);
           // 其他屬性
           if(DEF) line.push(`防禦力 +${DEF}`);
-          if(HP) line.push(`HP +${HP}`);
-          if(MP) line.push(`MP +${MP}`);
+          if(HP) line.push(`最大HP +${HP}`);
+          if(MP) line.push(`最大MP +${MP}`);
           if(MS) line.push(`移動速度 +${MS}`);
           if(Jump) line.push(`跳躍力 +${Jump}`);
-          if(LvMinus) line.push(`套用等級減少 ${LvMinus}`);
+          if(LvMinus) line.push(`裝備等級減少 ${LvMinus}`);
           logs.push(line.join("\n  - "));
         }
         break;
