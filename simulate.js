@@ -44,7 +44,7 @@ function simulate() {
       const selected = [...armorPool].sort(()=>Math.random()-0.5).slice(0,4);
 
       // 初始化所有屬性
-      let STR=0, DEX=0, INT=0, LUK=0, ALL=0, MA=0;
+      let STR=0, DEX=0, INT=0, LUK=0, ALL=0, MA=0, AT=0;
       let DEF=0, HP=0, MP=0, MS=0, Jump=0, LvMinus=0;
 
       selected.forEach(s=>{
@@ -58,6 +58,7 @@ function simulate() {
           if(s.name==="敏捷") DEX+=v;
           if(s.name==="智力") INT+=v;
           if(s.name==="幸運") LUK+=v;
+          if(s.name==="攻擊力") AT+=v;
           if(s.name==="魔法攻擊力") MA+=v;
           if(s.name==="全屬性") ALL+=v;
           if(s.name==="防禦力") DEF+=v;
@@ -83,7 +84,7 @@ function simulate() {
           if(DEX) line.push(`DEX +${DEX}`);
           if(INT) line.push(`INT +${INT}`);
           if(LUK) line.push(`LUK +${LUK}`);
-          if(MA) line.push(`攻擊力 +${MA}`);
+          if(AT) line.push(`攻擊力 +${AT}`);
           if(MA) line.push(`魔法攻擊力 +${MA}`);
           if(ALL) line.push(`全屬性 +${ALL}%`);
           // 其他屬性
